@@ -51,7 +51,9 @@ First, you will use the model of Puppo the Corgi trained by Unity. Then, you wil
  1. Open Unity. Open the Scene Fetch under Assets/PuppoTheCorgi/Fetch/Scenes
  2. Go to the Academy object, then to its child DogBrain. Make sure Brain Type is set to Internal and that Graph Model is set to Fetch-Model
  3. You’re all set! Most of the work has already been done for you. To play the game, click play, then Start, and grab the stick with your mouse and throw it.
+ 
 ![](Pictures/PuppoScreenshot1.png)
+
 ![](Pictures/PuppoScreenshot2.png)
 
 * Training Your Own Model
@@ -75,7 +77,9 @@ DogBrain:
  4. In Unity, build the project with only TrainingScene. I named my executable from the build Fetch
  5. You are now ready to begin training. In the Anaconda prompt, under the ml-agents directory, with ml-agents activated, run `mlagents-learn config/trainer_config.yaml --env=../Fetch.exe --run-id=myFirstTraining --train`. Note: This assumes that you haven’t renamed the trainer_config file or Fetch.exe, and the choice of the run-id is arbitrary. Working on a different project, you’ll have to adjust this command with the appropriate file names.
  6. It might take a little while to execute, and once it’s done, the wait isn’t over. A file should open up to an image that looks like this:
- ![](Pictures/PuppoScreenshot3.png)
+ 
+![](Pictures/PuppoScreenshot3.png)
+ 
  7. The longer you wait, the better your results will be. Unity’s machine learning is governed by rewards. In your terminal, you should see a series of lines that look like this: 
 
 ```
@@ -106,7 +110,7 @@ As you can see, the mean reward increased substantially.
 
 
 ## Summary
-
+Hopefully, you know understand the basics of machine learning in Unity. To learn more, read the DogAgent script and, if you feel adventurous, the core scripts that Agents and Brains inherit from. 
 
 ## Resources to Consult if Issues Arise
 
