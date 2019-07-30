@@ -4,8 +4,18 @@
 
 ## Overview
 
-The goal of this lab will be to familiarize you with the tools used to perform machine learning in unity and train a model yourself. TO that end, it is important to know a few key definitions. First, an **agent** is
+The goal of this lab will be to familiarize you with the tools used to perform machine learning in unity and train a model yourself. To that end, it is important to know a few key definitions. From a high level perspective, an **Agent**, as shown in the image below, performs actions that influence the environment. Based upon that action, the environment's state may change. The state of the environment may lead to a **reward** for the Agent, encouraging future Agents to perform the same actions.
 
+![](https://blogs.unity3d.com/wp-content/uploads/2017/09/image3.png)
+
+Now, Agents do not control their own actions. Those are decided by **Brains**. Brains have four different modes:
+ * Internal: Decisions are made by trained models embedded in the project. This is what we will be using.
+ * External: Decisions are made through communication with a Python library.
+ * Player: Decisions are determined by user input.
+ * Heuristic: Decisions are determined by yours or someone else's coded behavior.
+In your model, one Brain will make the decisions for a number of different agents.
+
+Finally, we have **Academies**. You should have a single Academy even when you have many Brains, as an Academy governs the environment as a whole, and each Brain should be a child of that Academy. The only exception would be if you want to have several environments with different configurations happening in the same build and training, which is almost certainly bad programming practice but could be useful at times. You shouldn't have to worry too much about Academies unless you look behind the scenes- the only adjustments you should be making to them are factors such as the time-scale and the dimenions of the training window.
 
 ## Setup
 
@@ -18,7 +28,8 @@ The goal of this lab will be to familiarize you with the tools used to perform m
  3. Go to [github.com](http://github.com) and create an account if you don’t have one.
  4. Go to [this link](https://git-scm.com/downloads) to download Git for your computer if you haven’t already.
 
-* Python Libraries
+
+* Python Libraries and ML-Agents
 
 ![](https://miro.medium.com/max/1200/0*RSHaCzm8VQ-DFQOv)
 
@@ -95,3 +106,10 @@ As you can see, the mean reward increased substantially.
 
 
 ## Summary
+
+
+## Resources to Consult if Issues Arise
+
+Agents, Brains, and Academies: [Click here](https://blogs.unity3d.com/2017/09/19/introducing-unity-machine-learning-agents/?_ga=2.12913719.1204716044.1564507456-955964214.1562636155)
+
+ML-Agents: [Click here](https://github.com/Unity-Technologies/ml-agents/blob/0.5.0/docs/Installation.md)
